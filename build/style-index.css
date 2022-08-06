@@ -1,0 +1,83 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-wpai-callout {
+  background-color: #f9f9fc;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #EBEAEE;
+  height: 125px;
+}
+
+.wp-block-wpai-callout-wrapper {
+  display: flex;
+}
+
+.wp-block-wpai-callout-outer {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.wp-block-wpai-callout-inner {
+  vertical-align: top;
+  display: inline-block;
+  margin: 0.5rem 1rem 0 1rem;
+  max-width: 100%;
+}
+
+.wp-block-wpai-callout-inner-text {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  font-size: medium;
+}
+
+.wp-block-wpai-callout-link-text {
+  font-family: "Graphik";
+  font-weight: 600;
+}
+
+.wp-block-wpai-callout-link-arrow {
+  margin-left: 10px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: all;
+}
+
+.wp-block-wpai-callout-link {
+  display: flex;
+  text-decoration: none;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #00b3b6;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: all;
+  max-width: 300px;
+  width: auto;
+  position: absolute;
+}
+
+.wp-block-wpai-callout-link:hover {
+  color: #007a7c;
+}
+
+.wp-block-wpai-callout-link:hover img.wp-block-wpai-callout-link-arrow {
+  filter: brightness(70%);
+}
+
+.wp-block-wpai-callout-info-icon {
+  border-radius: 50%;
+  background: white;
+  border: 0.4rem solid white;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

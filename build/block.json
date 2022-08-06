@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "wpai/callout",
+  "version": "0.1.3",
+  "title": "Callout",
+  "category": "text",
+  "icon": "warning",
+  "description": "Callout block for WP All Import's documentation.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "callout",
+  "attributes": {
+    "postType": {
+      "type": "string",
+      "default": "products"
+    },
+    "pluginName": {
+      "type": "string",
+      "default": "wpai"
+    },
+    "linkLabel": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
