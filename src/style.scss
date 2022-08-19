@@ -78,3 +78,36 @@
 	border: 1.5px solid #EBEAEE;
 	padding: 2.5px;
 }
+
+@media screen and (max-width: 639px) {
+	.wp-block-wpai-callout {
+		font-size: smaller;
+	}
+	.wp-block-wpai-callout-inner-text {
+		font-size: smaller;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.wp-block-wpai-callout {
+		height: 160px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.wp-block-wpai-callout {
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.wp-block-wpai-callout {
+		height: 270px;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.wp-block-wpai-callout {
+		height: 320px;
+	}
+}

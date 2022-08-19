@@ -68,8 +68,7 @@ export default function save( { attributes } ) {
 					{ mySwitch(postType) }</b>
 					{" "}using <b>{ ( pluginName === 'wpai' ) ? "WP All Import" : "WP All Export" }</b>. 
 					For a broader look at <b>{ ( pluginName === 'wpai' ) ? "importing " : "exporting " } 
-					{ mySwitch(postType) }</b>
-					{" "}with <b>{ ( pluginName === 'wpai' ) ? "WP All Import" : "WP All Export" }</b>, check out:</span>
+					{ mySwitch(postType) }</b>, check out:</span>
 					<a href={ linkUrl } style={{textTransform: 'capitalize'}} class="wp-block-wpai-callout-link">
 						<div class="wp-block-wpai-callout-link-text">{ linkLabel ? linkLabel :  ( ( pluginName === 'wpai' ) ? "Import" : "Export" ) + " " + mySwitch(postType) }</div>
 						<img src="https://www.wpallimport.com/wp-content/plugins/dc-nav/static/text-link-arrow-teal.svg" class="wp-block-wpai-callout-link-arrow"></img>

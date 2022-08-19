@@ -1,6 +1,6 @@
 {
 	"name": "callout",
-	"version": "0.1.3",
+	"version": "0.1.0",
 	"description": "Callout block for WP All Import's documentation.",
 	"author": "Diego Marigno",
 	"license": "GPL-2.0-or-later",
