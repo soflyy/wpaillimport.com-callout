@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps } from '@wordpress/block-editor';
-import icons from './icons.js';
+import infoIcon from './info-icon.svg';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -24,8 +24,6 @@ import icons from './icons.js';
  * @return {WPElement} Element to render.
  */
 export default function save( { attributes } ) {
-
-	const { Icon } = wp.components;
 
 	const {
 		postType,
@@ -61,7 +59,7 @@ export default function save( { attributes } ) {
 		<div { ...useBlockProps.save() }>
 			<div class="wp-block-wpai-callout-wrapper">
 				<div class="wp-block-wpai-callout-outer">
-					 <Icon icon={icons.info}/>
+				<img src={infoIcon} class="wp-block-wpai-callout-info-icon"></img>
 				</div>
 				<div class="wp-block-wpai-callout-inner">
 					<span class="wp-block-wpai-callout-inner-text">This documentation covers how to <b>{ ( pluginName === 'wpai' ) ? "import " : "export " } 
