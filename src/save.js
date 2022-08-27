@@ -98,10 +98,6 @@ export default function save( { attributes } ) {
 		  }
 	};
 
-	const myLabel = () => {
-		return mySwitchAction(pluginName) + mySwitchType(postType);
-	};
-
 	return (
 		<div { ...useBlockProps.save() }>
 			<div class="wp-block-wpai-callout-wrapper">
