@@ -12,7 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
 import { useBlockProps } from '@wordpress/block-editor';
-import { RadioControl, SelectControl, TextControl } from '@wordpress/components';
+import { SelectControl, TextControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -58,17 +58,20 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	return (
 		<div { ...useBlockProps() }>
-			<RadioControl
-				label="Select plugin"
+			<SelectControl
+				label="Select the Plugin or Action"
 				selected={ pluginName }
 				options={ [
 					{ label: 'WP All Import', value: 'wpai' },
 					{ label: 'WP All Export', value: 'wpae' },
+					{ label: 'Migrate', value: 'both' },
+					{ label: 'Bulk Edit', value: 'bulk' },
 				] }
 				onChange={ onChangePlugin }
+				__nextHasNoMarginBottom
 			/>
 			<SelectControl
-            	label="Post type"
+            	label="Define Post Type"
             	value={ postType }
             	options={ [
 					{ label: 'WordPress Users', value: 'users' },
@@ -80,6 +83,9 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ label: 'WooCommerce Reviews', value: 'reviews' },
 					{ label: 'WooCommerce Coupons', value: 'coupons' },
 					{ label: 'Gravity Forms Entries', value: 'gfentries' },
+					{ label: 'WordPress Posts', value: 'posts' },
+					{ label: 'Advanced Custom Fields', value: 'acf' },
+					{ label: 'Toolset Types', value: 'toolset' },
             	] }
             	onChange={ onChangePost }
             	__nextHasNoMarginBottom

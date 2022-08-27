@@ -31,7 +31,7 @@ export default function save( { attributes } ) {
 		linkUrl,
 	} = attributes;
 
-	const mySwitch = value => {
+	const mySwitchType = value => {
 		switch(value) {
 			case 'users':
 				return 'WordPress users';
@@ -50,8 +50,56 @@ export default function save( { attributes } ) {
 			case 'coupons':
 				return 'WooCommerce coupons';
 			case 'gfentries':
-				return 'Gravity Forms Entries';
+				return 'Gravity Forms entries';
+			case 'posts':
+				return 'WordPress posts';
+			case 'acf':
+				return 'Advanced Custom Fields';
+			case 'toolset':
+				return 'Toolset Types data';
 		  }
+	};
+
+	const mySwitchName = value => {
+		switch(value) {
+			case 'wpai':
+				return <b>WP All Import</b>;
+			case 'wpae':
+				return <b>WP All Export</b>;
+			case 'both':
+			case 'bulk':
+				return <span><b>WP All Import</b> and <b>WP All Export</b></span>;
+		  }
+	};
+
+	const mySwitchAction = value => {
+		switch(value) {
+			case 'wpai':
+				return 'import';
+			case 'wpae':
+				return 'export';
+			case 'both':
+				return 'migrate';
+			case 'bulk':
+				return 'bulk edit';
+		  }
+	};
+
+	const mySwitchActIng = value => {
+		switch(value) {
+			case 'wpai':
+				return <b>importing</b>;
+			case 'wpae':
+				return <b>exporting</b>;
+			case 'both':
+				return <b>migrating</b>;
+			case 'bulk':
+				return <b>bulk editing</b>;
+		  }
+	};
+
+	const myLabel = () => {
+		return mySwitchAction(pluginName) + mySwitchType(postType);
 	};
 
 	return (
@@ -61,13 +109,10 @@ export default function save( { attributes } ) {
 				<img src="https://www.wpallimport.com/wp-content/plugins/dc-nav/static/info-icon.svg" class="wp-block-wpai-callout-info-icon"></img>
 				</div>
 				<div class="wp-block-wpai-callout-inner">
-					<span class="wp-block-wpai-callout-inner-text">This documentation covers how to <b>{ ( pluginName === 'wpai' ) ? "import " : "export " } 
-					{ mySwitch(postType) }</b>
-					{" "}using <b>{ ( pluginName === 'wpai' ) ? "WP All Import" : "WP All Export" }</b>. 
-					For a broader look at <b>{ ( pluginName === 'wpai' ) ? "importing " : "exporting " } 
-					{ mySwitch(postType) }</b>, check out:</span>
+					<span class="wp-block-wpai-callout-inner-text">This documentation covers how to <b>{ mySwitchAction(pluginName) } { mySwitchType(postType) }</b> using { mySwitchName(pluginName) }. 
+					For a broader look at { mySwitchActIng(pluginName) } <b>{ mySwitchType(postType) }</b>, check out:</span>
 					<a href={ linkUrl } style={{textTransform: 'capitalize'}} class="wp-block-wpai-callout-link">
-						<div class="wp-block-wpai-callout-link-text">{ linkLabel ? linkLabel :  ( ( pluginName === 'wpai' ) ? "Import" : "Export" ) + " " + mySwitch(postType) }</div>
+						<div class="wp-block-wpai-callout-link-text">{ linkLabel ? linkLabel : mySwitchAction(pluginName) + " " + mySwitchType(postType) }</div>
 						<img src="https://www.wpallimport.com/wp-content/plugins/dc-nav/static/text-link-arrow-teal.svg" class="wp-block-wpai-callout-link-arrow"></img>
 					</a>
 				</div>
